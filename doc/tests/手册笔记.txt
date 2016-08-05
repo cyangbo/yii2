@@ -1,0 +1,10 @@
+初始化:
+
+codecept build
+
+新建:在tests文件夹下
+codecept generate:cept acceptance Welcome
+运行结果
+D:\vagrant\yii2\tests>codecept generate:cept acceptance Welcome
+Test was created in D:\vagrant\yii2\tests\codeception\acceptance\WelcomeCept.php
+
