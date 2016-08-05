@@ -10,5 +10,50 @@ Test was created in D:\vagrant\yii2\tests\codeception\acceptance\WelcomeCept.php
 
 运行测试:
 codecept run acceptance WelcomeCept
+获取详细的输出: 添加参数 --steps
+codecept run acceptance WelcomeCept --steps
+
+查看帮助命令:
+codecept help run
+
+新建:
+codecept generate:cept acceptance Signin
+运行测试:
+codecept run acceptance SigninCept --steps
+
+
+
+
+新建功能测试:
+codecept generate:cept functional TestCept
+运行测试:
+codecept run functional TestCept
+
+Bootstrap
+每一个套件都有他们自己的bootstrap文件，命名为 _bootstrap.php，测试套件执行前它会执行。 tests 目录下的是全局bootstrap文件，它可以用来include附加文件
+
+
+运行所有测试:不加参数
+codecept run
+运行一类测试:加类型参数
+codecept run acceptance
+运行一个测试文件:加文件名 | 全路径
+codecept run acceptance SigninCept
+codecept run codeception/acceptance/SigninCept.php  #在目录中:D:\vagrant\yii2\tests>
+
+测试一个目录的所有文件:
+codecept run acceptance codeception/acceptance/test  #在目录中:D:\vagrant\yii2\tests>
+
+
+测试报告(将HTML和XML报告存储到tests/_output/目录)
+你可以通过 --xml 选项生成JUnit XML，通过--html输出HTML报告。
+codecept run --steps --xml --html
+codecept run acceptance codeception/acceptance/test --html
+
+调试
+获取详细的输出，执行是加上--debug 选项，在测试中可以用那个 codecept_debug方法打印任何信息。
+codecept run acceptance codeception/acceptance/test --debug
+
+
 
 
