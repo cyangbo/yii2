@@ -8,3 +8,7 @@ codecept generate:cept acceptance Welcome
 D:\vagrant\yii2\tests>codecept generate:cept acceptance Welcome
 Test was created in D:\vagrant\yii2\tests\codeception\acceptance\WelcomeCept.php
 
+运行测试:
+codecept run acceptance WelcomeCept
+
+
